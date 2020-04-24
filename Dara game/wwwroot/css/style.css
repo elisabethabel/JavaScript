@@ -1,0 +1,125 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ .section {
+   height: 100vh;
+   /*background-color siia */
+   font-family: 'Titillium Web';
+   font-weight: bold;
+ }
+
+
+ .score {
+   height: 20vh;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   /*border-style: dotted;*/
+   /*border-color: darkmagenta;*/
+   /*border-radius: 3%;*/
+ }
+
+.score .player-name {
+  font-size: 16px;
+}
+.score p {
+  text-align: center;
+  padding: 3px;
+  font-size: 16px;
+}
+
+ .icon-block {
+    padding: 0 15px;
+  }
+
+  .icon-block .material-icons {
+      font-size: inherit;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    transition: opacity 0.5s;
+  }
+
+  .intro button  {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 3px;
+    border:none;
+    /*backround: */
+  }
+  
+  .settings{
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 3%;
+    padding: 20px;
+  }
+
+  .details{
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 3%;
+  }
+
+.game-content {
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: opacity 0.5s;
+}
+
+.game-board{
+  border: 0px;
+  padding:0; 
+  margin:0;
+  border-collapse: collapse;
+
+}
+.btn {
+  width: 50px;
+  height: 50px;
+}
+
+.new-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.new-game button{
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 3px;
+  border:none;
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+

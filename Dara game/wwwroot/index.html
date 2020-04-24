@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Dara</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="section" id="game">
+
+      <div class="intro">
+        <h2>
+          DARA
+        </h2>
+        <div class="settings">
+          <table>
+            <tr>
+              <th>
+                <div>
+                  CHOOSE A GAME MODE:
+                </div><br>
+                <input type="radio" id="radio1" checked="checked" name ="gameMode" value="humanVsHuman">
+                <label for="radio1">Human vs Human</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>
+                <input type="radio" id="radio2" name ="gameMode" value="humanVsComputer">
+                <label for="radio2">Human vs Computer</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <br>
+                <input type="radio" id="radio3" name ="gameMode" value="computerVsComputer">
+                <label for="radio3">Computer vs Computer</label>
+                <br><br>
+            </th>
+            <th>
+              <div class="gameText">CHOOSE WHO STARTS:</div><br>
+              <input type="radio" id="radio4" name ="startingPlayer" checked="checked" value="playerOne">
+              <label for="radio4">Player One / Human</label>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <br>
+              <input type="radio" id="radio5" name ="startingPlayer" value="playerTwo">
+              <label for="radio5">Player Two / Computer</label>
+              <br><br><br>
+            </th>
+          </tr>
+        </table>
+        <div class="gameText">ENTER PLAYER NAMES:</div>
+        <br>
+        <label for="player1-name">Player 1</label>
+        <input value="Player 1" id="player1-name">
+        <label for="player2-name">Player 2</label>
+        <input value="Player 2" id="player2-name"><br>
+        <div id="validation"></div>
+        <button>START</button>
+      </div>
+    </div>
+
+  <div class="game-content fadeOut">
+      <!-- details of game state -->
+<div class="details">
+  <!--Scores-->
+  <div class="score">
+   <div id="player1-score">
+     <div></div>
+     <p></p>
+   </div>
+   <div id="player2-score">
+     <div></div>
+     <p></p>
+   </div>
+ </div>
+
+ <!--instructions-->
+ <p class="players-turn"></p>
+ <div class="explanation"></div>
+
+</div>
+<!--game board-->
+<!-- row 1 -->
+<table>
+  <tr>
+    <th>
+      <a class=" btn js-cell" data-y="4" data-x="0"></a>
+    </th>
+    <th>
+      <a class="btn  js-cell" data-y="4" data-x="1"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="4" data-x="2"></a>
+    </th>
+    <th>
+      <a class="btn  js-cell" data-y="4" data-x="3"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="4" data-x="4"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="4" data-x="5"></a>
+    </th>
+  </tr>
+  <!-- row 2 -->
+  <tr>
+    <th>
+      <a class="btn js-cell" data-y="3" data-x="0"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="3" data-x="1"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="3" data-x="2"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="3" data-x="3"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="3" data-x="4"></a>
+    </th>
+    <th>
+      <a class="btn  js-cell" data-y="3" data-x="5"></a>
+    </th>
+  </tr>
+  <!-- row 3 -->
+  <tr>
+    <th>
+      <a class="btn  js-cell" data-y="2" data-x="0"></a>
+    </th>
+    <th>
+      <a class="btn  js-cell" data-y="2" data-x="1"></a>
+    </th>
+    <th>
+      <a class="btn  js-cell" data-y="2" data-x="2"></a>
+    </th>
+    <th>
+      <a class="btn  js-cell" data-y="2" data-x="3"></a>
+    </th>
+    <th>
+      <a class="btn  js-cell" data-y="2" data-x="4"></a>
+    </th>
+    <th>
+      <a class="btn  js-cell" data-y="2" data-x="5"></a>
+    </th>
+  </tr>
+  <!-- row 4 -->
+  <tr>
+    <th>
+      <a class="btn js-cell" data-y="1" data-x="0"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="1" data-x="1"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="1" data-x="2"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="1" data-x="3"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="1" data-x="4"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="1" data-x="5"></a>
+    </th>
+  </tr>
+  <!-- row 5 -->
+  <tr>
+    <th>
+      <a class=" btn js-cell" data-y="0" data-x="0"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="0" data-x="1"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="0" data-x="2"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="0" data-x="3"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="0" data-x="4"></a>
+    </th>
+    <th>
+      <a class="btn js-cell" data-y="0" data-x="5"></a>
+    </th>
+  </tr>
+</table>
+<br>
+<!-- new game and restart button -->
+<div class="new-game">
+  <button>NEW GAME</button>
+</div>
+    </div>
+      
+    </div>
+    </div>
+    <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+
+  <script src="main.js"></script>
+
+  </body>
+
+</html>
